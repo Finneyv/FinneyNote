@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FinneyNote.CreateNotePage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Save" Clicked="OnSave" Order="Primary" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Padding="20">
+				<Label Text="New Note" TextColor="Blue" FontSize="18" FontAttributes="Bold" />
+				<Entry x:Name="NoteTitle" Placeholder="Note Title" WidthRequest="150" />
+				<Editor x:Name="NoteContent" HeightRequest = "250"/>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

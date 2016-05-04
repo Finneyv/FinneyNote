@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FinneyNote.EditNotePage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Save" Clicked="OnSave" Order="Primary" Priority="0" />
+		<ToolbarItem Text="Delete" Clicked="OnDelete" Order="Primary" Priority="1" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Padding="20">
+				<StackLayout Orientation="Horizontal">
+					<Label Text="Note Edit" FontSize="18" FontAttributes="Bold" TextColor="Blue" />
+					<Label x:Name="DateCreatedEdit" Text="{Binding DateCreated}" FontSize="18" />
+				</StackLayout>
+				<Entry x:Name="NoteTitleEdit" Placeholder="Note Title" Text="{Binding NoteTitle}" WidthRequest="150" />
+				<Editor x:Name="NoteContentEdit" Text="{Binding NoteContent}" HeightRequest = "250"/>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
